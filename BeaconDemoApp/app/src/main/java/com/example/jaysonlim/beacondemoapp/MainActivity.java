@@ -37,8 +37,7 @@ public class MainActivity extends Activity{
 //TestActivity
 
         startService(new Intent(this, EstimoteService.class));
-
-        EstimoteManager.Create((NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE), this, new Intent(MainActivity.this, MainActivity.class));
+        EstimoteManager.Create((NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE), this, new Intent(MainActivity.this, MainActivity.class));
 
 
         findViewById(R.id.btnScanBeacon).setOnClickListener(new View.OnClickListener() {
@@ -67,6 +66,15 @@ public class MainActivity extends Activity{
             }
         });
 
+        findViewById(R.id.btnTreatureHunt).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, HuntingStartPage.class);
+                startActivity(intent);
+
+            }
+
+        });
     }
 /*
     @Override

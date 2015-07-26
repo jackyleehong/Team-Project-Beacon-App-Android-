@@ -3,4 +3,12 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+
+    <string name="title_activity_hunting_start_page">HuntingStartPage</string>
+    <string name="title_activity_hunting_exploration_page">HuntingExplorationPage</string>
+    <string name="title_activity_beacon_claim">BeaconClaimActivity</string>
+    <string name="title_activity_congratulation_display">CongratulationDisplayActivity</string>
+    <string name="title_activity_claim_beacon">ClaimBeaconActivity</string>
+    <string name="beacon_claim_header">Congratulation. You found the beacon!!!</string>
+
 </resources>

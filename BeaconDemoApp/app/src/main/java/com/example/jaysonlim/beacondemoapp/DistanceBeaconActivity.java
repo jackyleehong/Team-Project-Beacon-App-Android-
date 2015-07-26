@@ -3,6 +3,7 @@ package com.example.jaysonlim.beacondemoapp;
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.RemoteException;
+import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
@@ -19,7 +20,7 @@ import java.util.List;
 /**
  * Created by jaysonlim on 7/4/15.
  */
-public class DistanceBeaconActivity extends Activity {
+public class DistanceBeaconActivity extends ActionBarActivity {
 
     private static final String TAG = DistanceBeaconActivity.class.getSimpleName();
 
@@ -39,7 +40,7 @@ public class DistanceBeaconActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        getActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setContentView(R.layout.distance_view);
         dotView = findViewById(R.id.dot);
 

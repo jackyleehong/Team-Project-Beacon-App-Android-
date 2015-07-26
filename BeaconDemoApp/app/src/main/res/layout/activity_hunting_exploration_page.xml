@@ -1,0 +1,104 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.jaysonlim.beacondemoapp.HuntingExplorationPage">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" android:weightSum="100">
+    <TextView android:layout_weight="1.00" android:text="FIND THE MISSING PAPER BOATS" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"  android:textSize="20dp" android:layout_gravity="center"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_weight="1.00">
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:text="You found" />
+        <EditText android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/counter" android:text="0" android:editable="false"/>
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:text="paper boats" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_weight="1.00">
+        <ImageView
+            android:id="@+id/paperBoats1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/paperboats">
+        </ImageView>
+        <ImageView
+            android:id="@+id/paperBoats2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/paperboats">
+        </ImageView>
+        <ImageView
+            android:id="@+id/paperBoats3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/paperboats">
+        </ImageView>
+        <ImageView
+            android:id="@+id/paperBoats4"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/paperboats"
+            >
+        </ImageView>
+        <ImageView
+            android:id="@+id/paperBoats5"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/paperboats">
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/paperBoats6"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/paperboats"
+            >
+        </ImageView>
+
+        </LinearLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_weight="50.00">
+    <com.example.jaysonlim.beacondemoapp.DistanceBackgroundView
+        android:id="@+id/sonar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+        <ImageView
+            android:id="@+id/dot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|top"
+            android:visibility="gone"
+            android:src="@drawable/dot"/>
+</FrameLayout>
+
+</LinearLayout>
+
+</RelativeLayout>

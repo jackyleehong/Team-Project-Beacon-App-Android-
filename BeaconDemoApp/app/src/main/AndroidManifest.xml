@@ -1,19 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.jaysonlim.beacondemoapp" >
 
-    <uses-feature android:name="android.hardware.bluetooth_le" android:required="true"/>
+    <uses-sdk
+        android:minSdkVersion="2"
+        android:targetSdkVersion="14"
+        tools:overrideLibrary="com.example.lib1, com.example.lib2" />
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
 
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <android:uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
+    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <android:uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@android:style/Theme.Holo.Light">
-
-
+        android:theme="@android:style/Theme.Holo.Light" >
         <receiver android:name=".notification.EstimoteReceiver" >
             <intent-filter>
                 <action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
@@ -26,44 +40,51 @@
         <service android:name=".notification.EstimoteService" />
 
         <activity
-            android:name="MainActivity"
+            android:name=".MainActivity"
             android:label="Estimote Demos"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
-            android:name="ListNearablesActivity"
+            android:name=".ListNearablesActivity"
             android:label="Select Beacon"
-            android:screenOrientation="portrait"/>
-
-
+            android:screenOrientation="portrait" />
         <activity
-            android:name="NearablesDemoActivity"
+            android:name=".NearablesDemoActivity"
             android:label="Select Beacon"
-            android:screenOrientation="portrait"/>
-
+            android:screenOrientation="portrait" />
         <activity
-            android:name="TestActivity"
+            android:name=".TestActivity"
             android:label="Select Beacon"
-            android:screenOrientation="portrait"/>
-
+            android:screenOrientation="portrait" />
         <activity
-            android:name="ListBeaconsActivity"
+            android:name=".ListBeaconsActivity"
             android:label="Show Beacon Distance"
-            android:screenOrientation="portrait"/>
-
+            android:screenOrientation="portrait" />
         <activity
-            android:name="DistanceBeaconActivity"
+            android:name=".DistanceBeaconActivity"
             android:label="Show Beacon Distance"
-            android:screenOrientation="portrait"/>
-
-
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".HuntingStartPage"
+            android:label="@string/title_activity_hunting_start_page"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".HuntingExplorationPage"
+            android:label="@string/title_activity_hunting_exploration_page"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BeaconClaimActivity"
+            android:label="@string/title_activity_beacon_claim" >
+        </activity>
+        <activity
+            android:name=".CongratulationDisplayActivity"
+            android:label="@string/title_activity_congratulation_display" >
+        </activity>
     </application>
-
-
 
 </manifest>
